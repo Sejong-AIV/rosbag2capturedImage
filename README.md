@@ -27,6 +27,7 @@ $ python rosbag2image.py
 ls명령어를 통해, 캡쳐된 이미지를 조회할 수 있습니다. \
 (추가적으로, test.bag를 시각화하려면, rviz로 토픽을 구독해서 확인 할 수 있습니다.)
 
+---
 ### rosbag으로 record하기(추가)
 ```bash
 # ~ 경로에 rosbag저장 폴더 만들기
