@@ -1,3 +1,6 @@
+# aMAP_stride_championship
+## 2024-10-05 
+
 # Rosbag으로 이미지 토픽 Record하기
 ---
 ### 데모(연습)
