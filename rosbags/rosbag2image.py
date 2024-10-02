@@ -6,24 +6,22 @@ from cv_bridge import CvBridge
 import os
 
 # rosbag 파일 경로
-bag_file = 'data235.bag'
+bag_file = 'test.bag'
 
 # 저장할 이미지 경로
 output_folder_lane = f"{bag_file.split('.')[0]}"+"_lane_images"
 output_folder_traffic = f"{bag_file.split('.')[0]}"+"_traffic_images"
 
+# 이미지 별 저장 폴더 생성
 os.makedirs(output_folder_lane, exist_ok=True)
 os.makedirs(output_folder_traffic, exist_ok=True)
-
-# CvBridge 객체 생성
-bridge = CvBridge()
 
 # rosbag 열기
 with rosbag.Bag(bag_file, 'r') as bag:
     for i, (topic, msg, t) in enumerate(bag.read_messages(topics=['/image_jpeg_lane/compressed'])):
         
         # fps = 30, ignoring under 3 is 10frames_per_sec
-        ignore_num = 2
+        ignore_num = 3
         if i % ignore_num != 0:
             continue
 
