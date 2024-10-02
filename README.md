@@ -40,3 +40,6 @@ $ mkdir rosbags
 # 양식:rosbag record -O </path/to/directory/name.bag> <topic1> <topic2> 
 $ rosbag record -O ~/rosbags/test.bag /image_jpeg_lane/compressed /image_jpeg_traffic/compressed
 ```
+---
+Edited by "Hyeonseok Cho" \
+email : chohs5133@gmail.com
